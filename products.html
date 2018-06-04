@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SADRO</title>
+  <link rel="stylesheet" href="css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.min.css">
+  <style>
+    .header-image{
+      width: 170px;
+      height: 70px;
+      padding: 10px 0 14px 20px;
+    }
+    .collapsible-header:focus{
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+  <nav class="light-blue darken-4">
+    <div class="nav-wrapper">
+      <a href="index.html" class="brand-logo">
+        <img src="img/logo-white.png" class="header-image" alt="">
+      </a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="products.html">Productos</a></li>
+        <li><a href="sale.html">Ventas</a></li>
+        <li><a href="">Configuración</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="row">
+      <h4>Administración de productos</h4>
+    </div>
+    <div class="row">
+      <div class="col s4">
+        <form action="">
+          <div class="row">
+            <div class="col s12">
+              <div class="row">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix">search</i>
+                  <input type="text" id="autocomplete-input" class="autocomplete" autocomplete="off">
+                  <label for="autocomplete-input">Producto</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col s8">
+        <div class="col s12">
+          <ul class="collapsible">
+            <li>
+              <div class="collapsible-header">Producto 01</div>
+              <div class="collapsible-body">
+                <div class="row">
+                  <div class="col s3"><span>Valor : $20.000</span></div>
+                  <div class="col s9"><span>Categoría: Categoría 01</span></div>
+                </div>
+                <div class="row">
+                  <div class="chip">ingrediente</div>
+                  <div class="chip">ingrediente</div>
+                  <div class="chip">ingrediente</div>
+                  <div class="chip">ingrediente</div>
+                  <div class="chip">ingrediente</div>
+                </div>
+                <div class="row">
+                  <div class="col s3">
+                    <a href="#modalUpdate" class="blue-text accent-3 modal-trigger">ACTUALIZAR</a>
+                  </div>
+                  <div class="col s3">
+                    <a href="" class="blue-text accent-3">ELIMINAR</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">Producto 02</div>
+              <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+            </li>
+            <li>
+              <div class="collapsible-header">Producto 03</div>
+              <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="modalUpdate" class="modal">
+      <form action="">
+        <div class="modal-content">
+          <h4>Actualizar producto</h4>
+          <span></span>
+          <div class="row">
+            <div class="col s12">
+              <div class="input-field col s4">
+                <input type="text" name="name" id="name" class="validate" value="Producto 01">
+                <label for="quantity">Cantidad</label>
+              </div>
+              <div class="input-field col s4">
+                <input type="number" name="price" id="price" class="validate" value="20.000">
+                <label for="price">Precio</label>
+              </div>
+              <div class="input-field col s4">
+                <select>
+                  <option value="" disabled selected>Selecione su opción</option>
+                  <option value="1">Categoria 01</option>
+                  <option value="2">Categoría 2</option>
+                  <option value="3">Categoría 3</option>
+                </select>
+                <label>Categorías</label>
+              </div>
+            </div>
+            <div class="col s12">
+              <div class="col s12">
+                <h6>INGREDIENTES</h6>
+              </div>
+              <div class="col s4">
+                <div class="input-field col s12">
+                  <select>
+                    <option value="" disabled selected>Selecione</option>
+                    <option value="1">Ingrediente</option>
+                    <option value="1">Ingrediente</option>
+                    <option value="1">Ingrediente</option>
+                  </select>
+                  <label>Ingredientes</label>
+                </div>
+              </div>
+              <div class="col s8">
+                  <div class="chip product-img" id="ing01">ingrediente<i class="close material-icons">close</i></div>
+                  <div class="chip">ingrediente1<i class="close material-icons">close</i></div>
+                  <div class="chip">ingrediente2<i class="close material-icons">close</i></div>
+                  <div class="chip">ingrediente3<i class="close material-icons">close</i></div>
+                  <div class="chip">ingrediente4<i class="close material-icons">close</i></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancelar</a>
+          <input type="submit" class="light-blue darken-4 btn" value="Actualizar" id="register-sale">
+        </div>
+      </form>  
+    </div>
+
+    <div id="modalCategory" class="modal">
+      <form action="">
+        <div class="modal-content">
+          <h4>Categorías</h4>
+          <span></span>
+          <div class="row">
+            <div class="col s12">
+              <div class="row">
+                <div class="input-field col s8">
+                  <i class="material-icons prefix">search</i>
+                  <input type="text" id="autocomplete-input" class="autocomplete" autocomplete="off">
+                  <label for="autocomplete-input">Categoría</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <ul class="collapsible">
+              <li>
+                <div class="collapsible-header">Categoría 01</div>
+                <div class="collapsible-body">
+                  <div class="row">
+                    <div class="input-field col s6">
+                      <input type="text" name="name" id="name" class="validate" value="Categoría 01">
+                      <label for="quantity">Nombre de categoría</label>
+                    </div>
+                    <div class="col s3">
+                      <input type="submit" class="btn-small orange lighten-2" value="Actualizar">
+                    </div>
+                    <div class="col s3">
+                      <input type="submit" class="btn-small orange accent-4" value="Eliminar">
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="collapsible-header">Categoría 02</div>
+                <div class="collapsible-body">
+                  <div class="row">
+                    <div class="input-field col s6">
+                      <input type="text" name="name" id="name" class="validate" value="Categoría 02">
+                      <label for="quantity">Nombre de categoría</label>
+                    </div>
+                    <div class="col s3">
+                      <input type="submit" class="btn-small orange lighten-2" value="Actualizar">
+                    </div>
+                    <div class="col s3">
+                      <input type="submit" class="btn-small orange accent-4" value="Eliminar">
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+      </form>  
+    </div>
+
+    <div class="fixed-action-btn">
+      <a class="btn-floating btn-large orange accent-4">
+        <i class="large material-icons">settings</i>
+      </a>
+      <ul>
+        <li><a href="#modalCategory" class="btn-floating orange lighten-2 modal-trigger"><i class="material-icons">create</i></a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/materialize.min.js"></script>
+  <!-- <script src="js/main.js"></script> -->
+  <script>
+
+    document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('.autocomplete');
+      var instances = M.Autocomplete.init(elems, options);
+      var instances = M.FormSelect.init(elems);
+      var instances = M.Collapsible.init(elems);
+      var instances = M.Modal.init(elems);
+      var instances = M.FloatingActionButton.init(elems);
+    })
+    
+    $('.collapsible').collapsible()
+    $('.modal').modal()
+    $('select').formSelect()
+    $('.fixed-action-btn').floatingActionButton()
+    $('input.autocomplete').autocomplete({
+      data: {
+        "Apple": null,
+        "Microsoft": null,
+        "Google": 'https://placehold.it/250x250'
+      },
+    })
+
+    $('.product-img > i').on('click', function(e){
+      var el = $(this)
+      console.log("-- "+el.parent().attr('id'))
+    })
+  </script>
+  
+</body>
+</html>
