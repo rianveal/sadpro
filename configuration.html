@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SADRO</title>
+  <link rel="stylesheet" href="css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.min.css">
+  <style>
+    .header-image{
+      width: 170px;
+      height: 70px;
+      padding: 10px 0 14px 20px;
+    }
+    .tabs .tab a{
+      color: #039be5;
+    }
+    .tabs .tab a:hover,
+    .tabs .tab a.active{
+      background-color: transparent;
+      color: #01579b;
+    }
+    .tabs .tab a:focus, 
+    .tabs .tab a:focus.active{
+      background-color: rgba(1, 87, 155, 0.03);
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="light-blue darken-4">
+    <div class="nav-wrapper">
+      <a href="index.html" class="brand-logo">
+        <img src="img/logo-white.png" class="header-image" alt="">
+      </a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="products.html">Productos</a></li>
+        <li><a href="sale.html">Ventas</a></li>
+        <li><a href="configuration.html">Configuración</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="row">
+      <div class="col s8">
+        <h4>Configuraciones generales</h4>
+      </div>
+    </div>
+  
+    <div class="row">
+      <div class="col s12">
+        <ul class="tabs">
+          <li class="tab col s3"><a class="active" href="#test1">Categorías</a></li>
+          <li class="tab col s3"><a href="#test2">Ingredientes</a></li>
+        </ul>
+      </div>
+      <div id="test1" class="col s12">
+        <div class="row"></div>
+        <div class="row">
+          <div class="col s3">
+            <ul class="collection">
+              <li class="collection-item"><div>Crear<a href="#modalCategory" class="secondary-content blue-text darken-4 modal-trigger"><i class="material-icons">create</i></a></div></li>
+              <li class="collection-item"><div>Actualizar<a href="#modalCategoryUpdate" class="secondary-content blue-text darken-4 modal-trigger"><i class="material-icons">update</i></a></div></li>
+              <li class="collection-item"><div>Eliminar<a href="#modalCategoryDelete" class="secondary-content blue-text darken-4 modal-trigger"><i class="material-icons">delete</i></a></div></li>
+            </ul>
+          </div>
+          <div class="col s5 offset-s1">
+            <table class="highlight">
+              <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>NOMBRE DE LA CATEGORÍA</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>01</td>
+                  <td>Categoría 01</td>
+                  <td><a href="#modalCategoryUpdate" class="secondary-content blue-text darken-4 modal-trigger"><i class="material-icons">update</i></a></td>
+                  <td><a href="#modalCategoryDelete" class="secondary-content red-text accent-4 modal-trigger"><i class="material-icons">delete</i></a></td>
+                </tr>
+                <tr>
+                  <td>02</td>
+                  <td>Categoría 02</td>
+                  <td><a href="#modalCategoryUpdate" class="secondary-content blue-text darken-4 modal-trigger"><i class="material-icons">update</i></a></td>
+                  <td><a href="#modalCategoryDelete" class="secondary-content red-text accent-4 modal-trigger"><i class="material-icons">delete</i></a></td>
+                </tr>
+                <tr>
+                  <td>03</td>
+                  <td>Categoría 03</td>
+                  <td><a href="#modalCategoryUpdate" class="secondary-content blue-text darken-4 modal-trigger"><i class="material-icons">update</i></a></td>
+                  <td><a href="#modalCategoryDelete" class="secondary-content red-text accent-4 modal-trigger"><i class="material-icons">delete</i></a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div id="test2" class="col s12">
+        <div class="row"></div>
+        <div class="row">
+          <div class="col s3">
+            <ul class="collection">
+              <li class="collection-item"><div>Crear<a href="#modalIngredients" class="secondary-content blue-text darken-4 modal-trigger"><i class="material-icons">create</i></a></div></li>
+              <li class="collection-item"><div>Actualizar<a href="#modalIngredientsUpdate" class="secondary-content blue-text darken-4 modal-trigger"><i class="material-icons">update</i></a></div></li>
+              <li class="collection-item"><div>Eliminar<a href="#modalIngredientsDelete" class="secondary-content blue-text darken-4 modal-trigger"><i class="material-icons">delete</i></a></div></li>
+            </ul>
+          </div>
+          <div class="col s5 offset-s1">
+            <table class="highlight">
+              <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>NOMBRE DEL INGREDIENTE</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>01</td>
+                  <td>Ingrediente 01</td>
+                  <td><a href="#modalIngredientsUpdate" class="secondary-content blue-text darken-4 modal-trigger"><i class="material-icons">update</i></a></td>
+                  <td><a href="#modalIngredientsDelete" class="secondary-content red-text accent-4 modal-trigger"><i class="material-icons">delete</i></a></td>
+                </tr>
+                <tr>
+                  <td>02</td>
+                  <td>Ingrediente 02</td>
+                  <td><a href="#modalIngredientsUpdate" class="secondary-content blue-text darken-4 modal-trigger"><i class="material-icons">update</i></a></td>
+                  <td><a href="#modalIngredientsDelete" class="secondary-content red-text accent-4 modal-trigger"><i class="material-icons">delete</i></a></td>
+                </tr>
+                <tr>
+                  <td>03</td>
+                  <td>Ingrediente 03</td>
+                  <td><a href="#modalIngredientsUpdate" class="secondary-content blue-text darken-4 modal-trigger"><i class="material-icons">update</i></a></td>
+                  <td><a href="#modalIngredientsDelete" class="secondary-content red-text accent-4 modal-trigger"><i class="material-icons">delete</i></a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="modalCategory" class="modal">
+    <form action="">
+        <div class="modal-content">
+          <h4>Agregar categoría</h4>
+          <div class="row">
+            <div class="input-field col s8">
+              <input type="text" id="category" class="validate" autocomplete="off">
+              <label for="category">Nombre de la categoría</label>
+            </div>
+            <div class="col s3 offset-s1">
+              <div class="row"></div>
+              <input type="submit" class="wave light-blue darken-4 btn-small" value="Registrar">
+            </div>
+          </div>
+        </div>
+    </form>  
+  </div>
+
+  <div id="modalCategoryUpdate" class="modal">
+    <form action="">
+        <div class="modal-content">
+          <h4>Actualizar categoría</h4>
+
+          <div class="row">
+            <div class="col s12">
+              <div class="row">
+                <div class="input-field col s8">
+                  <i class="material-icons prefix">search</i>
+                  <input type="text" id="autocomplete-input" class="autocomplete" autocomplete="off">
+                  <label for="autocomplete-input">Categoría</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field col s8">
+              <input type="text" id="category-name-update" class="validate" autocomplete="off">
+              <label for="category-name-update">Nombre de la categoría</label>
+            </div>
+            <div class="col s3 offset-s1">
+              <div class="row"></div>
+              <input type="submit" class="wave light-blue darken-4 btn-small" value="Actualizar">
+            </div>
+          </div>
+        </div>
+    </form>  
+  </div>
+
+  <div id="modalCategoryDelete" class="modal">
+    <form action="">
+        <div class="modal-content">
+          <h4>Eliminar categoría</h4>
+
+          <div class="row">
+            <div class="col s12">
+              <div class="row">
+                <div class="input-field col s8">
+                  <i class="material-icons prefix">search</i>
+                  <input type="text" id="autocomplete-input-cat-delete" class="autocomplete" autocomplete="off">
+                  <label for="autocomplete-input-cat-delete">Categoría</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field col s8">
+              <input type="text" id="category-name-delete" class="validate" autocomplete="off">
+              <label for="category-name-delete">Nombre de la categoría</label>
+            </div>
+            <div class="col s3 offset-s1">
+              <div class="row"></div>
+              <input type="submit" class="wave red accent-4 btn-small" value="Eliminar">
+            </div>
+          </div>
+        </div>
+    </form>  
+  </div>
+
+  <div id="modalIngredients" class="modal">
+    <form action="">
+        <div class="modal-content">
+          <h4>Agregar ingrediente</h4>
+          <div class="row">
+            <div class="input-field col s8">
+              <input type="text" id="ingredient" class="validate" autocomplete="off">
+              <label for="ingredient">Nombre del ingrediente</label>
+            </div>
+            <div class="col s3 offset-s1">
+              <div class="row"></div>
+              <input type="submit" class="wave light-blue darken-4 btn-small" value="Registrar">
+            </div>
+          </div>
+        </div>
+    </form>  
+  </div>
+
+  <div id="modalIngredientsUpdate" class="modal">
+    <form action="">
+        <div class="modal-content">
+          <h4>Actualizar ingrediente</h4>
+
+          <div class="row">
+            <div class="col s12">
+              <div class="row">
+                <div class="input-field col s8">
+                  <i class="material-icons prefix">search</i>
+                  <input type="text" id="autocomplete-input-ing-update" class="autocomplete" autocomplete="off">
+                  <label for="autocomplete-input-ing-update">Ingrediente</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field col s8">
+              <input type="text" id="ingredient-name-update" class="validate" autocomplete="off">
+              <label for="ingredient-name-update">Nombre del ingrediente</label>
+            </div>
+            <div class="col s3 offset-s1">
+              <div class="row"></div>
+              <input type="submit" class="wave light-blue darken-4 btn-small" value="Actualizar">
+            </div>
+          </div>
+        </div>
+    </form>  
+  </div>
+
+  <div id="modalIngredientsDelete" class="modal">
+    <form action="">
+        <div class="modal-content">
+          <h4>Eliminar ingrediente</h4>
+
+          <div class="row">
+            <div class="col s12">
+              <div class="row">
+                <div class="input-field col s8">
+                  <i class="material-icons prefix">search</i>
+                  <input type="text" id="autocomplete-input-ing-delete" class="autocomplete" autocomplete="off">
+                  <label for="autocomplete-input-ing-delete">Ingrediente</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field col s8">
+              <input type="text" id="ingredient-name-delete" class="validate" autocomplete="off">
+              <label for="ingredient-name-delete">Nombre del ingrediente</label>
+            </div>
+            <div class="col s3 offset-s1">
+              <div class="row"></div>
+              <input type="submit" class="wave red accent-4 btn-small" value="Eliminar">
+            </div>
+          </div>
+        </div>
+    </form>  
+  </div>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/materialize.min.js"></script>
+  <!-- <script src="js/main.js"></script> -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('.modal');
+      var elemsAutocomplete = document.querySelectorAll('.autocomplete');
+      var instances = M.Modal.init(elems);
+      var instances = M.Autocomplete.init(elemsAutocomplete, options);
+
+    });
+
+    $(document).ready(function(){
+      $('.tabs').tabs();
+      $('.modal').modal();
+
+      $('input.autocomplete').autocomplete({
+        data: {
+          "Ingrediente 01": null,
+          "Ingrediente 02": null,
+          "Ingrediente 03": null
+        },
+      });
+
+    });
+  </script>
+</body>
+</html>

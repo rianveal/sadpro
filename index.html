@@ -27,7 +27,7 @@
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a href="products.html">Productos</a></li>
         <li><a href="sale.html">Ventas</a></li>
-        <li><a href="">Configuración</a></li>
+        <li><a href="configuration.html">Configuración</a></li>
       </ul>
     </div>
   </nav>
@@ -42,7 +42,7 @@
     <!-- Table -->
     <div class="row">
       <div class="col s3 offset-s9">
-        <a class="waves-effect waves-light btn teal accent-4 modal-trigger" href="#modalAdd">Nueva venta<i class="material-icons right">add</i></a>
+        <a class="waves-effect waves-light btn orange accent-4 modal-trigger" href="#modalAdd">Nueva venta<i class="material-icons right">add</i></a>
       </div>
       <!-- Table data -->
       <table class="striped">
@@ -50,7 +50,7 @@
           <tr>
               <th>Productos</th>
               <th>Cantidad vendida</th>
-              <th>Precio</th>
+              <th>Acciones</th>
           </tr>
         </thead>
 
@@ -58,17 +58,26 @@
           <tr>
             <td>Producto 01</td>
             <td>20</td>
-            <td><a href="" class="waves-effect waves-light btn-small blue-grey lighten-1"><i class="material-icons center">remove_red_eye</i></a></td>
+            <td>
+              <a href="" class="waves-effect waves-light btn-small blue-grey lighten-1"><i class="material-icons center">remove_red_eye</i></a>
+              <a href="" class="waves-effect waves-light btn-small red lighten-1"><i class="material-icons center">delete</i></a>
+            </td> 
           </tr>
           <tr>
             <td>Producto 02</td>
             <td>10</td>
-            <td><a href="" class="waves-effect waves-light btn-small blue-grey lighten-1"><i class="material-icons center">remove_red_eye</i></a></td>
+            <td>
+              <a href="" class="waves-effect waves-light btn-small blue-grey lighten-1"><i class="material-icons center">remove_red_eye</i></a>
+              <a href="" class="waves-effect waves-light btn-small red lighten-1"><i class="material-icons center">delete</i></a>
+            </td> 
           </tr>
           <tr>
             <td>Producto 03</td>
             <td>3</td>
-            <td><a href="" class="waves-effect waves-light btn-small blue-grey lighten-1"><i class="material-icons center">remove_red_eye</i></a></td>
+            <td>
+              <a href="" class="waves-effect waves-light btn-small blue-grey lighten-1"><i class="material-icons center">remove_red_eye</i></a>
+              <a href="" class="waves-effect waves-light btn-small red lighten-1"><i class="material-icons center">delete</i></a>
+            </td> 
           </tr>
         </tbody>
       </table>
@@ -110,7 +119,7 @@
         </div>
         <div class="modal-footer">
           <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancelar</a>
-          <input type="submit" class="waves-green btn" value="Registrar" id="register-sale">
+          <input type="submit" class="waves-green orange accent-4 btn" value="Registrar" id="register-sale">
         </div>
       </form>  
     </div>
